@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <div class="demo">
+                <div class="mb-3">
+                    <label for="username">帳號</label>
+                    <input type="text" name="username" id="username" class="form-control"
+                        placeholder="帳號字數不可超過8個字!">
+                    <div class="err_username mt-2"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">密碼</label>
+                    <input type="password" name="password" id="password" class="form-control"
+                        placeholder="密碼字數限制4~10個字!">
+                    <div class="err_password mt-2"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="repassword">確認密碼</label>
+                    <input type="password" name="repassword" id="repassword" class="form-control"
+                        placeholder="請再次輸入密碼確認是否一致!">
+                    <div class="err_repassword mt-2"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="eamil字數8~12字!">
+                    <div class="valid-feedback">email格式正確!</div>
+                    <div class="invalid-feedback">email格式錯誤!</div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-secondary">取消</button>
+                    <button class="btn btn-primary" id="ok_btn">確認</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 offset-2">
+            <div id="showmsg" class="demo"></div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script>
+    var flag_username = false;
+    var flag_password = false;
+    var flag_repassword = false;
+    var flag_email = false;
+
+    $(function () {
+        //change事件監聽
+        // $("#username").change(function(){
+        //     console.log($(this).val());
+        // });
+
+        //username 即時監聽 input propertychange
+        $("#username").bind("input propertychange", function () {
+            console.log($(this).val().length);
+            if ($(this).val().length < 9) {
+                //合法
+                $(".err_username").html("帳號字數符合規則!");
+                $(".err_username").css("color", "green");
+                flag_username = true;
+            } else {
+                //不合法
+                $(".err_username").html("帳號字數不可超過8個字!");
+                $(".err_username").css("color", "red");
+                flag_username = false;
+            }
+        });
+
+        //password 即時監聽 input propertychange
+        $("#password").bind("input propertychange", function () {
+            console.log($(this).val().length);
+            if ($(this).val().length > 3 && $(this).val().length < 11) {
+                //合法
+                $(".err_password").html("密碼符合規則!");
+                $(".err_password").css("color", "green");
+                flag_password = true;
+            } else {
+                //不合法
+                $(".err_password").html("密碼字數限制4~10個字!");
+                $(".err_password").css("color", "red");
+                flag_password = false;
+            }
+        });
+
+        //repassword 即時監聽 input propertychange
+        $("#repassword").bind("input propertychange", function () {
+            console.log($(this).val());
+            if ($(this).val() == $("#password").val()) {
+                //合法
+                $(".err_repassword").html("密碼確認無誤!");
+                $(".err_repassword").css("color", "green");
+                flag_repassword = true;
+            } else {
+                //不合法
+                $(".err_repassword").html("密碼確認錯誤, 請重新輸入!");
+                $(".err_repassword").css("color", "red");
+                flag_repassword = false;
+            }
+        });
+
+        //email 即時監聽 input propertychange
+        $("#email").bind("input propertychange", function(){
+            // console.log("test hi");
+            if($(this).val().length > 7 && $(this).val().length > 7 < 13){
+                //合法
+                $(this).removeClass("is-invalid");
+                $(this).addClass("is-valid");
+                flag_email = true;
+            }else{
+                //不合法
+                $(this).removeClass("is-valid");
+                $(this).addClass("is-invalid");
+                flag_email = false;
+            }
+        });
+
+        //ok_btn按鈕監聽
+        $("#ok_btn").click(function () {
+            // console.log("test ok!");
+            if (flag_username && flag_password && flag_repassword && flag_email) {
+                //欄位皆符合規定
+                $("#showmsg").html("<h2>帳號: " + $("#username").val() + "</h2><h2>密碼: " + $("#password").val() + "</h2><h2>Email: " + $("#email").val() + "</h2>");
+            } else {
+                //欄位有錯誤
+                alert("欄位有錯誤, 請修正!");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
