@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        .demo {
+            background-color: rgb(97, 138, 31);
+        }
+        .box {
+            height: 150px;
+            width: 150px;
+            background-color: cornflowerblue;
+            border: 2px solid #b321b8;
+            display: inline-block;
+        }
+
+        .box01 {
+            height: 150px;
+            width: 200px;
+            background-color: cornflowerblue;
+            border: 2px solid #b321b8;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="fs-2 fw-900">1.border</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="demo">
+        <div class="fs-2 fw-900">1.border</div>
+        <div class="box"></div>
+        <div class="box border-top"></div>
+        <div class="box border-bottom"></div>
+        <div class="box border-start"></div>
+        <div class="box border-end"></div>
+    </div>
+    <!-- border 移除邊框 -->
+    <div class="demo">
+        <div class="fs-2 fw-900">border 移除邊框</div>
+        <div class="box"></div>
+        <div class="box border border-0"></div>
+        <div class="box border border-start-0"></div>
+        <div class="box border border-end-0"></div>
+        <div class="box border border-top-0 border-bottom-0"></div>
+    </div>
+    <!-- border 厚度和顏色 -->
+    <div class="demo">
+        <div class="fs-2 fw-900">border 厚度和顏色</div>
+        <div class="box"></div>
+        <div class="box border border-2 border-primary"></div>
+        <div class="box border border-3 border-success"></div>
+        <div class="box border border-4 border-info"></div>
+        <div class="box border border-5 border-warning"></div>
+    </div>
+    <!-- border圓角 -->
+    <div class="demo">
+        <div class="fs-2 fw-900">border 圓角</div>
+        <div class="box border border-3 rounded"></div>
+        <div class="box border border-3 rounded-top"></div>
+        <div class="box border border-3 rounded-bottom"></div>
+        <div class="box border border-3 rounded-start"></div>
+        <div class="box border border-3 rounded-end"></div>
+        <div class="box border border-3 rounded-circle"></div>
+        <div class="box01 border border-3 rounded-pill"></div>
+    </div>
+    <!-- 文字顏色 -->
+    <div class="demo">
+        <div class="fs-2 fw-900">2.文字顏色</div>
+        <p class="text-primary">文字顏色primary
+            <a href="#" class="link-info">這是一個超連結link-info</a>
+        </p>
+        <p class="text-info">文字顏色info
+            <a href="#" class="link-warning">這是一個超連結link-warning</a>
+        </p>
+        <p class="text-success">文字顏色success</p>
+        <p class="text-warning">文字顏色warning</p>
+        <p class="text-danger">文字顏色danger</p>
+        <p class="text-secondary">文字顏色secondary</p>
+        <p class="text-bg-danger">文字背景色text-bg-danger</p>
+        <p class="text-bg-info">文字背景色text-bg-info</p>
+        
+    </div>
+
+    
+    <div class="demo">
+        <div class="fs-2 fw-900">3.display</div>
+        <div class="p-2 text-bg-primary mb-2">d-inline</div>
+        <div class="p-2 text-bg-primary d-inline">d-inline</div>
+        <div class="p-2 text-bg-primary d-inline">d-inline</div>
+        <div class="p-2 text-bg-primary d-inline">d-inline</div>
+        <hr>
+        <span class="p-2 text-bg-primary">d-block</span>
+        <span class="p-2 text-bg-primary d-block mt-2">d-block</span>
+        <hr>
+        <span class="p-2 text-bg-primary d-none d-lg-block">手機隱藏, PC lg 顯示</span>
+        <span class="p-2 text-bg-primary d-none d-xl-block">手機隱藏, PC xl 顯示</span>
+    </div> 
+    <!-- 文字選取 -->
+    <div class="demo">
+        <div class="fs-2 fw-900">4.文字互動</div>
+        <p class="user-select-all">簡單中壢選手準備測試培訓，精華因為，電。</p>
+        <p class="user-select-auto">簡單中壢選手準備測試培訓，精華因為，電。</p>
+        <p class="user-select-none">簡單中壢選手準備測試培訓，精華因為，電。</p>
+    </div>
+    <!-- overflow -->
+    <div class="demo">
+        <div class="fs-2 fw-900">4.文字互動</div>
+        <div class="box">信心不好，來源型號神秘網絡估計鑒定就好轉身紅色，動畫容量媒體長度聲音進攻對話線路兩次眼裡規則就有安全加盟，隱藏版商標有。</div>
+        <div class="box overflow-auto">信心不好，來源型號神秘網絡估計鑒定就好轉身紅色，動畫容量媒體長度聲音進攻對話線路兩次眼裡規則就有安全加盟，隱藏版商標有。</div>
+        <div class="box overflow-visible">信心不好，來源型號神秘網絡估計鑒定就好轉身紅色，動畫容量媒體長度聲音進攻對話線路兩次眼裡規則就有安全加盟，隱藏版商標有。</div>
+        <div class="box overflow-hidden">信心不好，來源型號神秘網絡估計鑒定就好轉身紅色，動畫容量媒體長度聲音進攻對話線路兩次眼裡規則就有安全加盟，隱藏版商標有。</div>
+        <div class="box overflow-scroll">信心不好，來源型號神秘網絡估計鑒定就好轉身紅色，動畫容量媒體長度聲音進攻對話線路兩次眼裡規則就有安全加盟，隱藏版商標有。</div>
+        <hr>
+        <div class="bg-info w-100">
+            <ul class="d-flex justify-content-between flex-nowrap overflow-scroll list-unstyled">
+                <li class="p-3 text-nowrap">選單001 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單002 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單003 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單004 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單005 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單006 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單007 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單008 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單009 - 我的天啊</li>
+                <li class="p-3 text-nowrap">選單0010 - 我的天啊</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 固定元件 sticky -->
+    <!-- <div class="demo" style="height: 800px;">
+        <div class="fs-2 fw-900">6.固定元件 sticky</div>
+        <ul class="d-flex justify-content-between flex-nowrap overflow-scroll list-unstyled sticky-top">
+            <li class="p-3 text-nowrap">選單001 - 我的天啊</li>
+            <li class="p-3 text-nowrap">選單002 - 我的天啊</li>
+            <li class="p-3 text-nowrap">選單003 - 我的天啊</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero assumenda, dolorum molestias eius placeat. Repellat fuga nobis odio dolor ad ratione amet iste sapiente neque ut, quos accusantium voluptate delectus? Fuga tenetur beatae, minima similique non, quis nemo sint libero est quam exercitationem consequuntur veritatis eligendi ex. Sequi eum, sed fuga quaerat, nam vitae tempora incidunt totam culpa placeat iure! Nulla quaerat ullam, aut modi earum a, quae nam aliquam cupiditate laudantium id quia neque sequi mollitia sapiente consequatur fugit, ducimus commodi non! Ipsam voluptatum dolor beatae aliquid minima a voluptas assumenda et iure dolores accusamus ad rem autem quod, commodi asperiores porro accusantium, expedita excepturi. Architecto, maxime officiis doloremque, voluptatum veritatis doloribus id odit recusandae illum consectetur obcaecati laboriosam quaerat, iure impedit placeat dolorum repudiandae quidem aut iste? Exercitationem error illum quisquam! Porro consequuntur doloremque modi quasi eaque suscipit, rerum repellat quia cumque quos id nemo pariatur corrupti.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero assumenda, dolorum molestias eius placeat. Repellat fuga nobis odio dolor ad ratione amet iste sapiente neque ut, quos accusantium voluptate delectus? Fuga tenetur beatae, minima similique non, quis nemo sint libero est quam exercitationem consequuntur veritatis eligendi ex. Sequi eum, sed fuga quaerat, nam vitae tempora incidunt totam culpa placeat iure! Nulla quaerat ullam, aut modi earum a, quae nam aliquam cupiditate laudantium id quia neque sequi mollitia sapiente consequatur fugit, ducimus commodi non! Ipsam voluptatum dolor beatae aliquid minima a voluptas assumenda et iure dolores accusamus ad rem autem quod, commodi asperiores porro accusantium, expedita excepturi. Architecto, maxime officiis doloremque, voluptatum veritatis doloribus id odit recusandae illum consectetur obcaecati laboriosam quaerat, iure impedit placeat dolorum repudiandae quidem aut iste? Exercitationem error illum quisquam! Porro consequuntur doloremque modi quasi eaque suscipit, rerum repellat quia cumque quos id nemo pariatur corrupti.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi libero assumenda, dolorum molestias eius placeat. Repellat fuga nobis odio dolor ad ratione amet iste sapiente neque ut, quos accusantium voluptate delectus? Fuga tenetur beatae, minima similique non, quis nemo sint libero est quam exercitationem consequuntur veritatis eligendi ex. Sequi eum, sed fuga quaerat, nam vitae tempora incidunt totam culpa placeat iure! Nulla quaerat ullam, aut modi earum a, quae nam aliquam cupiditate laudantium id quia neque sequi mollitia sapiente consequatur fugit, ducimus commodi non! Ipsam voluptatum dolor beatae aliquid minima a voluptas assumenda et iure dolores accusamus ad rem autem quod, commodi asperiores porro accusantium, expedita excepturi. Architecto, maxime officiis doloremque, voluptatum veritatis doloribus id odit recusandae illum consectetur obcaecati laboriosam quaerat, iure impedit placeat dolorum repudiandae quidem aut iste? Exercitationem error illum quisquam! Porro consequuntur doloremque modi quasi eaque suscipit, rerum repellat quia cumque quos id nemo pariatur corrupti.</p>
+
+
+    </div> -->
+    <!-- 陰影 shadow 大小 -->
+    <div class="demo bg-light">
+        <div class="fs-2 fw-900">7.shadow</div>
+        <div class="p-3 text-bg-light rounded shadow-sm">英國不可能，每個非。</div>
+        <div class="p-3 text-bg-light rounded shadow mt-2">英國不可能，每個非。</div>
+        <div class="p-3 text-bg-light rounded shadow-lg mt-2">英國不可能，每個非。</div>
+    </div>
+    <!-- 寬度 sizing -->
+    <div class="demo bg-light">
+        <div class="fs-2 fw-900">8.sizing(W)</div>
+        <div class="bg-secondary p-3 w-25 mt-2">w-25</div>
+        <div class="bg-secondary p-3 w-50 mt-2">w-50></div>
+        <div class="bg-secondary p-3 w-75 mt-2">w-75</div>
+        <div class="bg-secondary p-3 w-100 mt-2">w-100</div>
+    </div>
+    <!-- 高度 -->
+    <div class="demo bg-light" style="height: 180px;">
+        <div class="fs-2 fw-900">9.sizing(H)</div>
+        <div class="bg-success h-25 d-inline-block" style="width: 120px;">h-25</div>
+        <div class="bg-success h-50 d-inline-block" style="width: 120px;">h-50</div>
+        <div class="bg-success h-75 d-inline-block" style="width: 120px;">h-75</div>
+        <div class="bg-success h-100 d-inline-block" style="width: 120px;">h-100</div>
+        <div class="bg-success h-auto d-inline-block" style="width: 120px;">h-auto</div>
+    </div>
+    <div class="demo bg-light" style="height: 180px;">
+        <div class="fs-2 fw-900">10.vh, vw (註解)</div>
+        <!-- <div class="bg-info py-2 vh-100"></div> -->
+        <!-- <div class="bg-info py-2 vw-100"></div> -->
+    </div>
+    
+    <div class="demo bg-light">
+        <div class="fs-2 fw-900">11. text</div>
+        <p class="text-start">眼神幫忙住宅標準各位近期，則是安全，一。</p>
+        <p class="text-center">眼神幫忙住宅標準各位近期，則是安全，一。</p>
+        <p class="text-end">眼神幫忙住宅標準各位近期，則是安全，一。</p>
+        <hr>
+        <div class="fs-3">結合中斷點</div>
+        <p class="text-md-center text-lg-start">眼神幫忙住宅標準各位近期，則是安全，一。</p>
+        <p class="text-md-end text-lg-start">眼神幫忙住宅標準各位近期，則是安全，一。</p>
+    </div>
+    <!-- 隱藏 出現 visibile -->
+    <div class="demo bg-light">
+        <div class="fs-2 fw-900 text-info">12. visibile</div>
+        <div class="box"></div>
+        <div class="box invisible"></div>
+        <div class="box visible"></div>
+    </div>
+        
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+</body>
+</html>
