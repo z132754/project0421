@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert platform exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .carousel-caption {
+            background-color: rgb(150, 150, 200, .3);
+            padding: 15px;
+        }
+        @media screen and (max-width: 768px){
+            .section5_img {
+                z-index: -1;
+                right: 0;
+            }
+            .section5_text {
+                background-color: rgb(0, 0, 0, .3);
+                color: white;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- *******section 1******* -->
+    <section class="bg-secondary">
+        <div class="container text-end">
+            <a href="https://zh-tw.facebook.com/"><i class="fa-brands fa-square-facebook text-white"></i></a>
+            <i class="fa-brands fa-square-twitter text-white"></i>
+        </div>
+    </section>
+    <!-- *******section 2******* -->
+    <section class="bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-solid fa-cheese text-danger fa-2x"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button"    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section4">熱門商品</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#section5">當季新鮮水果</a>
+                            </li><li class="nav-item">
+                                <a class="nav-link" href="#section6">甜點理念</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                詳細介紹
+                                </a>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">最新款</a></li>
+                                <li><a class="dropdown-item" href="#">最熱門</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">經典款</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="d-flex" role="search">
+                            <button class="btn btn-outline-warning me-1" data-bs-toggle="modal" data-bs-target="#loginModal">登入</button>
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#registerModal">註冊</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+  
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="" class="form-label">帳號</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">密碼</label>
+                        <input type="password" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#registerModal">還沒有帳號,註冊新帳號!</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">確認</button>
+                    <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">會員註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>會員條款</h2>
+                            <p>【  會員服務條款  】</p>
+                            <p>●本會員服務條款所稱之「會員」，為依照本站所定之加入會員程序加入完成並通過認證者。</p>     
+                            <p>●當您使用本站服務時，即表示您同意及遵守本服務條款的規定事項及相關法律之規定。</p>   
+                            <p>●本站保留有審核加入會員資格之權利，另外已加入會員者，本站亦保留有解除其會員資格之權利。</p>    
+                            <p>●本會員服務條款之修訂，適用於所有會員，當本站修訂本服務條款時，將於本站上公告。</p>    
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="" class="form-label">帳號</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">密碼</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">同意以上規定</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex">
+                    <a href="#" class="me-auto" data-bs-toggle="modal" data-bs-target="#loginModal">已經有帳號,直接登入!</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">確認</button>
+                    <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *******section 3******* -->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item bg-cover active" style="background-image: url(img/dessert_1.avif); height: 480px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item bg-cover" style="background-image: url(img/dessert_2.avif); height: 480px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item bg-cover" style="background-image: url(img/dessert_4.avif); height: 480px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <!-- *******section 4 熱門商品******* -->
+    <section class="bg-info py-5" id="section4">
+        <div class="container">
+            <div class="row fw-900">
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-cookie fa-6x my-2 text-warning"></i>
+                    <h2>季節限定</h2>
+                    <p>適逢9月逐漸由夏轉秋之際，貼心整理出各家外型精巧、口感甜蜜的新品甜點，品牌有Bake Cheese Tart、由布院Milch、Zakuzaku、好丘、曲奇四重奏、佳佳甜品、微兜petit doux、詩特莉Aunt Stella，讓嗜甜成性的你，不用擔心甜點吃膩，找不到新口味。</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-cake-candles fa-6x my-2 text-danger"></i>
+                    <h2>熱銷商品</h2>
+                    <p>適逢9月逐漸由夏轉秋之際，貼心整理出各家外型精巧、口感甜蜜的新品甜點，品牌有Bake Cheese Tart、由布院Milch、Zakuzaku、好丘、曲奇四重奏、佳佳甜品、微兜petit doux、詩特莉Aunt Stella，讓嗜甜成性的你，不用擔心甜點吃膩，找不到新口味。</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-ice-cream fa-6x my-2 text-primary"></i>
+                    
+                    <h2>每日限量</h2>
+                    <p>適逢9月逐漸由夏轉秋之際，貼心整理出各家外型精巧、口感甜蜜的新品甜點，品牌有Bake Cheese Tart、由布院Milch、Zakuzaku、好丘、曲奇四重奏、佳佳甜品、微兜petit doux、詩特莉Aunt Stella，讓嗜甜成性的你，不用擔心甜點吃膩，找不到新口味。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *******section 5 當季新鮮水果******* -->
+    <section style="position: relative;" class="p-3" id="section5">
+        <div class="row">
+            <div class="col-md-5 bg-cover section5_img" style="position: absolute; background-image: url(img/fruit.avif);top: 0; bottom: 0;"></div>
+        </div>
+        <div class="containaer">
+            <div class="row justify-content-end">
+                <div class="col-md-7 section5_text">
+                    <h2 class="fw-900">當季新鮮水果</h2>
+                    <p>億元需求出去宅宅門口圖文，防止上升協議面前為此感覺說過關心協議信心，結合補充會員價灌水加入皮膚改變上去，填寫促進並沒有，民間第一章而來批評上傳注重備案廣場天堂突破面臨支持上去，無疑孩子造型，大量角度。</p>
+                    <button class="btn btn-outline-warning">查看更多</button>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5 class="fw-700">熱銷水果</h5>
+                            <p>氣氛結婚科技有限公司帶著歐美，黃金證書決定建設滿意活動危險，上下依靠咱們結合未知面前立刻，值得消息。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-700">熱銷水果</h5>
+                            <p>氣氛結婚科技有限公司帶著歐美，黃金證書決定建設滿意活動危險，上下依靠咱們結合未知面前立刻，值得消息。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *******section 6 當季新鮮水果******* -->
+    <section id="section6" class="py-3">
+        <div class="container">
+            <h2 class="text-center fw-900">甜點理念</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-regular fa-lemon fa-6x text-danger me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">新鮮</h3>
+                            <p>業績報價秘密前面加快委託，網咖我在評分我都賓館報告解決方案，參數動物，合同工作人員，內容簡介，類似。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-solid fa-seedling fa-6x text-success me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">新鮮</h3>
+                            <p>業績報價秘密前面加快委託，網咖我在評分我都賓館報告解決方案，參數動物，合同工作人員，內容簡介，類似。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-solid fa-wheat-awn fa-6x text-warning me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">新鮮</h3>
+                            <p>業績報價秘密前面加快委託，網咖我在評分我都賓館報告解決方案，參數動物，合同工作人員，內容簡介，類似。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div>
+                            <i class="fa-regular fa-lemon fa-6x text-danger me-3 mt-3"></i>
+                        </div>
+                        <div>
+                            <h3 class="fw-700 text-center">新鮮</h3>
+                            <p>業績報價秘密前面加快委託，網咖我在評分我都賓館報告解決方案，參數動物，合同工作人員，內容簡介，類似。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+</body>
+</html>

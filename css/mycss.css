@@ -24,8 +24,10 @@
 *{
     padding: 0;
     margin: 0;
-    
+    box-sizing: border-box
 }
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+TC:wght@500;700;900&display=swap');
 
@@ -39,4 +41,9 @@ body{
 }
 .fw-900{
     font-weight: 900;
+}
+
+.bg-cover {
+    background-position: center center;
+    background-size: cover;
 }
